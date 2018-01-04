@@ -17,9 +17,9 @@ $Commands = [PSCustomObject]@{
     #"hmq1725" = "" #HMQ1725
     "jha" = "" #JHA
     "keccak" = "" #Keccak
-    "lbry" = "" #Lbry
+    #"lbry" = "" #Lbry
     "lyra2v2" = "" #Lyra2RE2
-    "lyra2z" = "" #Lyra2z
+    #"lyra2z" = "" #Lyra2z
     "myr-gr" = "" #MyriadGroestl
     "neoscrypt" = "" #NeoScrypt
     "nist5" = "" #Nist5
@@ -46,7 +46,6 @@ $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty 
         HashRates = [PSCustomObject]@{(Get-Algorithm $_) = $Stats."$($Name)_$(Get-Algorithm $_)_HashRate".Week}
         API = "Ccminer"
         Port = 4048
-        Wrap = $false
         URI = $Uri
     }
 }
