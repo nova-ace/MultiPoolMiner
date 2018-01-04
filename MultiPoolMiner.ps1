@@ -41,11 +41,8 @@ param(
     [Int]$Delay = 0, #seconds before opening each miner
     [Parameter(Mandatory = $false)]
     [Switch]$Watchdog = $false,
-<<<<<<< HEAD
-=======
     [Parameter(Mandatory = $false)]
     [String]$MinerStatusURL,
->>>>>>> upstream/master
     [Parameter(Mandatory = $false)]
     [Int]$SwitchingPrevention = 1 #zero does not prevent miners switching
 )
